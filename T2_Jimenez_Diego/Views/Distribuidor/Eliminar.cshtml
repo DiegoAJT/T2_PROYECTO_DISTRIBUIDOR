@@ -1,0 +1,68 @@
+﻿@model T2_Jimenez_Diego.Models.Distribuidor
+@{
+    ViewData["Title"] = "Eliminar";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>Eliminar</h1>
+
+<form method="post" asp-action="Eliminar">
+    <input asp-for="ID" hidden />
+    <div class="border p-3">
+
+        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+        <div class="form-group row">
+            <h2 class="text-info pl-3">¿Desea eliminar este distribuidor?</h2>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <label asp-for="NombreDistribuidor" class="form-label">Nombre de distribuidor</label>
+                    <input asp-for="NombreDistribuidor" disabled class="form-control" />
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-6">
+                    <label asp-for="RazonSocial" class="form-label">Razon Social</label>
+                    <input asp-for="RazonSocial" disabled class="form-control" />
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-6">
+                    <label asp-for="Telefono" class="form-label">Telefono</label>
+                    <input asp-for="Telefono" disabled class="form-control" />
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-6">
+                    <label asp-for="AnioInicioOperacion" class="form-label">Año de inicio de operaciòn</label>
+                    <input asp-for="AnioInicioOperacion" disabled class="form-control" />
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-6">
+                    <label asp-for="Contacto" class="form-label">Contacto</label>
+                    <input asp-for="Contacto" disabled class="form-control" />
+                </div>
+            </div>
+
+            <div class="d-grid gap-2 d-md-block">
+                <button type="submit" class="btn btn-primary">Eliminar</button>
+                <a asp-controller="Distribuidor" asp-action="Index" class="btn btn-success">Volver</a>
+            </div>
+
+        </div>
+    </div>
+</form>
+
+@section Scripts{
+    @{
+        <partial name="_ValidationScriptsPartial" />
+    }
+}
+
